@@ -1,0 +1,53 @@
+865900377;Paulo Allen;04/15/2025;Em processamento;1001;Toyota;Corolla;1800;650000;P;Pessoal;N;Sim;6
+827654321;Maria Cossa;03/27/2025;Em transito;1002;Honda;Civic;1600;580000;P;Profissional;N;Não;0
+869876543;Rooney Reis;04/07/2025;Entrega concluida;1003;Volkswagen;Golf;2100;720000;P;Pessoal;D;03/15/2024
+842345678;Ana Sitoe;03/12/2025;Em processamento;1004;Nissan;X-Trail;2500;950000;P;Profissional;N;Sim;3
+826789012;Pedro Jonh;04/02/2025;Em transito;1005;Mazda;CX-5;2200;880000;E;5;R;SAutoMax
+860123456;Sofia Nhantumbo;04/07/2025;Entrega concluida;1006;Toyota;RAV4;2000;820000;P;Pessoal;N;Não;0
+843456789;António Matsolo;03/29/2025;Em processamento;1007;Mitsubishi;Pajero;3000;1200000;E;10;S;Ministério da Saúde;Sim
+828765432;Luísa Manjate;04/05/2025;Em transito;1008;Hyundai;Tucson;1800;750000;P;Profissional;N;Sim;5
+861234567;Rui Mabjaia;03/18/2025;Entrega concluida;1009;Kia;Sportage;2000;790000;P;Pessoal;D;04/30/2024
+845432198;Célia Chirindza;04/07/2025;Em processamento;1010;Suzuki;Vitara;1600;650000;E;20;R;CarImport;
+829876543;Paulo Matusse;03/25/2025;Em transito;1011;Toyota;Hilux;2800;1500000;E;6;S;MISAU;Não
+864567890;Beatriz Mabunda;04/01/2025;Entrega concluida;1012;Ford;Ranger;3200;1600000;P;Profissional;N;Sim;4
+847890123;Fernando Guambe;03/15/2025;Em processamento;1013;Isuzu;D-Max;2500;1350000;P;Profissional;D;05/01/2024
+823210987;Helena Mondlane;04/07/2025;Em transito;1014;Mercedes;C200;2000;1800000;E;15;S;Ministério da Educação;Sim
+866543210;Roberto Mulungo;03/22/2025;Entrega concluida;1015;BMW;X3;2500;2100000;P;Pessoal;N;Não;0
+841357924;Amélia Manhiça;03/31/2025;Em processamento;1016;Audi;Q5;2400;1950000;P;Pessoal;D;02/15/2023
+827924680;Victor Cumbane;04/07/2025;Em transito;1017;Jeep;Compass;2000;1550000;E;3;R;MotorWorld;
+868642086;Carol Vilanculos;03/19/2025;Entrega concluida;1018;Peugeot;3008;1600;1200000;P;Profissional;N;Sim;7
+844209753;Joaquim Chissano;03/26/2025;Em processamento;1019;Renault;Duster;1500;850000;E;10;S;Município de Maputo;Não
+825793148;Fátima Nhampossa;04/03/2025;Em transito;1020;Chevrolet;Trax;1400;780000;P;Pessoal;N;Não;0
+867531902;Daniel Massingue;04/07/2025;Entrega concluida;1021;Toyota;Fortuner;2700;1850000;P;Pessoal;D;01/20/2025
+842680359;Teresa Macuácua;03/17/2025;Em processamento;1022;Nissan;Qashqai;1800;950000;E;10;R;AutoPlus;
+828097432;Manuel Sambo;03/28/2025;Em transito;1023;Honda;HR-V;1500;820000;P;Pessoal;N;Sim;2
+863542109;Rosa Matavele;04/04/2025;Entrega concluida;1024;Hyundai;Creta;1600;850000;E;15;S;INAE;Sim
+846129753;Ricardo Zunguze;04/07/2025;Em processamento;1025;Kia;Sorento;2200;1250000;P;Profissional;N;Não;0
+821098765;Sónia Mavie;03/21/2025;Em transito;1026;Mazda;BT-50;2500;1450000;P;Pessoal;D;03/25/2024
+865467321;Eduardo Chaúque;03/30/2025;Entrega concluida;1027;Mitsubishi;Eclipse;1500;920000;E;2;R;CarZone;
+849876123;Celeste Muthemba;04/06/2025;Em processamento;1028;Volkswagen;Tiguan;2000;1350000;P;Profissional;N;Sim;8
+824321098;Miguel Chemane;04/07/2025;Em transito;1029;Ford;EcoSport;1600;780000;E;10;S;Ministério das Obras Públicas;Não
+862198765;Isaura Machel;03/25/2025;Entrega concluida;1030;Suzuki;S-Cross;1400;690000;P;Profissional;D;04/15/2023
+847654321;Alberto Nuvunga;04/02/2025;Em processamento;1031;Toyota;Yaris;1300;580000;P;Pessoal;N;Não;0
+822345678;Dulce Macamo;03/16/2025;Em transito;1032;Honda;Fit;1200;520000;E;10;R;SuperAuto;
+863456789;Simão Matsinhe;04/04/2025;Entrega concluida;1033;BMW;X1;2000;1850000;P;Pessoal;N;Sim;5
+840123456;Anabela Muianga;04/07/2025;Em processamento;1034;Audi;A3;1800;1650000;E;10;S;INSS;Sim
+826789012;Rafael Xerinda;03/23/2025;Em transito;1035;Mercedes;GLA;2100;1950000;P;Profissional;D;03/30/2023
+864567890;Catarina Bila;03/31/2025;Entrega concluida;1036;Jeep;Renegade;1600;1250000;E;10;R;VeículosMZ;
+845678901;Valério Sitói;04/05/2025;Em processamento;1037;Renault;Captur;1300;750000;P;Pessoal;N;Não;0
+821234567;Judite Machava;04/07/2025;Em transito;1038;Peugeot;2008;1400;780000;E;5;S;Ministério da Justiça;Não
+860987654;Nelson Mandela;03/20/2025;Entrega concluida;1039;Chevrolet;Onix;1000;650000;P;Pessoal;N;Sim;3
+848765432;Vera Moiane;03/27/2025;Em processamento;1040;Hyundai;i10;1100;550000;P;Profissional;D;05/10/2024
+823456789;Tomás Vilanculo;04/01/2025;Em transito;1041;Kia;Picanto;1000;520000;E;15;R;AutoCenter;
+867890123;Elisa Mahumane;04/07/2025;Entrega concluida;1042;Toyota;Rush;1500;890000;P;Pessoal;N;Não;0
+849012345;Gabriel Tsada;03/14/2025;Em processamento;1043;Nissan;Kicks;1600;920000;E;2;S;Instituto Nacional de Transportes;Sim
+825678901;Fernanda Pedro;03/22/2025;Em transito;1044;Mazda;CX-3;1800;950000;P;Pessoal;D;01/15/2025
+861234567;Gilberto Mendes;03/29/2025;Entrega concluida;1045;Honda;WR-V;1500;850000;E;5;R;CarMoz;
+844321098;Natália Chissano;04/07/2025;Em processamento;1046;Volkswagen;T-Cross;1400;980000;P;Profissional;N;Sim;6
+827890123;Lucas Matusse;03/18/2025;Em transito;1047;Suzuki;Jimny;1500;850000;E;5;S;Ministério do Turismo;Não
+865432109;Diana Machel;03/26/2025;Entrega concluida;1048;Ford;Figo;1200;520000;P;Pessoal;N;Não;0
+841234567;André Matavel;04/03/2025;Em processamento;1049;Mitsubishi;ASX;2000;1150000;P;Profissional;D;02/28/2024
+828901234;Olívia Muthemba;04/07/2025;Em transito;1050;Hyundai;Venue;1400;750000;E;1;R;AutoImport;
+841234567;Manuel Cossa;15/10/2025;Em Transito;1058;Toyota;Rush;1500;570000.0;P;Pessoal;N;Nao;0
+849299486;Helder;01/03/2025;Em Transito;1060;Honda;Accord;2400;650000.0;P;Pessoal;N;Nao;0
+849299486;Helder;03/04/2025;Em Transito;1051;Toyota;Camry;2500;680000.0;P;Pessoal;N;Nao;0

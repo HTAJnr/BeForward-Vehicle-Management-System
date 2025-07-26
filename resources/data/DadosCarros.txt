@@ -1,0 +1,79 @@
+Toyota;Corolla;1800;450000.0
+Toyota;Camry;2500;680000.0
+Toyota;Prius;1800;520000.0
+Toyota;RAV4;2000;750000.0
+Toyota;Hilux;2800;890000.0
+Toyota;Yaris;1500;410000.0
+Toyota;Land Cruiser;4500;2500000.0
+Toyota;Fortuner;2800;960000.0
+Toyota;Rush;1500;570000.0
+Honda;Civic;1500;420000.0
+Honda;Accord;2400;650000.0
+Honda;CR-V;2000;720000.0
+Honda;Fit;1300;380000.0
+Honda;HR-V;1800;580000.0
+Honda;Insight;1500;490000.0
+Honda;Passport;3500;940000.0
+Nissan;Sentra;1600;440000.0
+Nissan;Altima;2500;670000.0
+Nissan;X-Trail;2500;780000.0
+Nissan;Navara;2500;850000.0
+Nissan;March;1200;350000.0
+Nissan;Kicks;1600;460000.0
+Nissan;370Z;3700;1150000.0
+Mazda;Mazda3;2000;480000.0
+Mazda;CX-5;2500;720000.0
+Mazda;CX-3;2000;620000.0
+Mazda;Mazda6;2500;680000.0
+Mazda;BT-50;3200;920000.0
+Mazda;MX-5;2000;530000.0
+Mazda;CX-9;3300;850000.0
+Mitsubishi;Lancer;1800;460000.0
+Mitsubishi;Outlander;2400;750000.0
+Mitsubishi;Pajero;3200;980000.0
+Mitsubishi;L200;2500;820000.0
+Mitsubishi;Mirage;1200;340000.0
+Mitsubishi;ASX;2000;610000.0
+Mitsubishi;Eclipse Cross;1500;650000.0
+Hyundai;Elantra;2000;470000.0
+Hyundai;Tucson;2000;730000.0
+Hyundai;Santa Fe;2400;820000.0
+Hyundai;i20;1200;360000.0
+Hyundai;Creta;1600;590000.0
+Hyundai;i10;1100;310000.0
+Hyundai;Palisade;3800;990000.0
+Kia;Cerato;2000;480000.0
+Kia;Sportage;2000;740000.0
+Kia;Sorento;2400;810000.0
+Kia;Picanto;1000;320000.0
+Kia;Rio;1400;380000.0
+Kia;Stinger;3300;1250000.0
+Kia;Seltos;1600;560000.0
+BMW;Serie 3;2000;1200000.0
+BMW;Serie 5;3000;1850000.0
+BMW;X3;2000;1650000.0
+BMW;X5;3000;2200000.0
+BMW;Serie 7;4000;2700000.0
+BMW;X6;3000;2400000.0
+Mercedes;Classe C;2000;1300000.0
+Mercedes;Classe E;3000;1900000.0
+Mercedes;GLC;2000;1700000.0
+Mercedes;GLE;3000;2300000.0
+Mercedes;Classe A;1600;1100000.0
+Mercedes;Classe S;4000;2900000.0
+Audi;A3;1400;980000.0
+Audi;A4;2000;1400000.0
+Audi;Q3;1400;1250000.0
+Audi;Q5;2000;1750000.0
+Audi;A6;2500;1600000.0
+Audi;Q7;3000;2150000.0
+Range Rover;Evoque;2000;2100000.0
+Range Rover;Velar;3000;2600000.0
+Range Rover;Sport;4400;3200000.0
+Range Rover;Discovery;3000;2800000.0
+Peugeot;208;1200;360000.0
+Peugeot;3008;1600;580000.0
+Ford;Focus;1600;430000.0
+Ford;Everest;3200;880000.0
+Chevrolet;Spark;1200;330000.0
+Chevrolet;Trailblazer;2800;840000.0
