@@ -14,7 +14,7 @@ Honda;Fit;1300;380000.0
 Honda;HR-V;1800;580000.0
 Honda;Insight;1500;490000.0
 Honda;Passport;3500;940000.0
-Nissan;Sentra;1600;440000.0
+Nissan;Sentra;1800;440000.0
 Nissan;Altima;2500;670000.0
 Nissan;X-Trail;2500;780000.0
 Nissan;Navara;2500;850000.0

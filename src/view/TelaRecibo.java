@@ -20,7 +20,7 @@ public class TelaRecibo extends JFrame
 {
     // Componentes da interface
     private JLabel tituloLabel, numeroReciboLabel, separadorLabel1, separadorLabel2, separadorLabel3,
-    clienteLabel, nomeClienteLabel, contatoClienteLabel, tipoClienteLabel, tipoEspecificoLabel, 
+    clienteLabel, nomeClienteLabel, contatoClienteLabel, tipoClienteLabel, 
     carroLabel, codigoCarroLabel, marcaCarroLabel, cilindradaCarroLabel, precoLabel, precoBaseLabel, descontoLabel, precoFinalLabel,
     estadoLabel, dataCompraLabel, observacoesLabel, rodapeLabel, direitosAduaneirosLabel, impostoConsumoLabel, ivaLabel, taxasFixasLabel;
     private JButton btnFechar, btnRemover;
@@ -152,22 +152,22 @@ public class TelaRecibo extends JFrame
         if (c instanceof Doutorado)
         {
         	tipo  = "PARTICULAR";
-        	tipoEspecifico = "TIPO PARTICULAR:	DOUTORADO";
+        	tipoEspecifico = "DOUTORADO";
         }
         else if (c instanceof Normal) 
         {
         	tipo  = "PARTICULAR";
-        	tipoEspecifico = "TIPO PARTICULAR:	NORMAL";
+        	tipoEspecifico = "NORMAL";
         }
         else if (c instanceof Revendedor) 
         {
         	tipo  = "EMPRESARIAL";
-        	tipoEspecifico = "TIPO: EMPRESARIAL REVENDEDOR";
+        	tipoEspecifico = "REVENDEDOR";
         }
         else if (c instanceof Estado) 
         {
         	tipo  = "EMPRESARIAL";
-        	tipoEspecifico = "TIPO: EMPRESARIAL ESTADO";
+        	tipoEspecifico = "ESTADO";
         }
         
         // DADOS DO CLIENTE
@@ -184,19 +184,12 @@ public class TelaRecibo extends JFrame
         gbcCentral.gridx = 0; gbcCentral.gridy = linha++;
         centralPanel.add(contatoClienteLabel, gbcCentral);
         
-        tipoClienteLabel = new JLabel("Tipo: " + tipo);
+        tipoClienteLabel = new JLabel("Tipo: " + tipo +" - "+ tipoEspecifico);
         tipoClienteLabel.setFont(arial13);
         tipoClienteLabel.setForeground(grey1);
         gbcCentral.gridx = 0; gbcCentral.gridy = linha++;
         centralPanel.add(tipoClienteLabel, gbcCentral);
-        
-        tipoEspecificoLabel = new JLabel(tipoEspecifico);
-        tipoEspecificoLabel.setFont(arial13);
-        tipoClienteLabel.setForeground(grey1);
-        gbcCentral.gridx = 0; gbcCentral.gridy = linha++;
-        gbcCentral.insets = new Insets(5, 20, 15, 0);
-        centralPanel.add(tipoEspecificoLabel, gbcCentral);
-        
+                
         // SECÇÃO DO CARRO
         carroLabel = new JLabel("DADOS DO VEÍCULO");
         carroLabel.setFont(arial16);
@@ -578,18 +571,11 @@ public class TelaRecibo extends JFrame
         gbcCentral.gridx = 0; gbcCentral.gridy = linha++;
         centralPanel.add(contatoClienteLabel, gbcCentral);
         
-        tipoClienteLabel = new JLabel("Tipo: " + tipo);
+        tipoClienteLabel = new JLabel("Tipo: " + tipo + " - " + tipoEspecifico);
         tipoClienteLabel.setFont(arial13);
         tipoClienteLabel.setForeground(grey1);
         gbcCentral.gridx = 0; gbcCentral.gridy = linha++;
         centralPanel.add(tipoClienteLabel, gbcCentral);
-        
-        tipoEspecificoLabel = new JLabel(tipoEspecifico);
-        tipoEspecificoLabel.setFont(arial13);
-        tipoClienteLabel.setForeground(grey1);
-        gbcCentral.gridx = 0; gbcCentral.gridy = linha++;
-        gbcCentral.insets = new Insets(5, 20, 15, 0);
-        centralPanel.add(tipoEspecificoLabel, gbcCentral);
         
         // SECÇÃO DO CARRO
         carroLabel = new JLabel("DADOS DO VEÍCULO");
@@ -784,9 +770,10 @@ public class TelaRecibo extends JFrame
 	                
 	                // Adicionar listener aos botões para saber quando foi clicado
 	                telaConfirmacao.btnConfirmar.addActionListener(new ActionListener() 
-	                {
+	                { 
 	                    public void actionPerformed(ActionEvent evt) 
 	                    {
+	                    	telaConfirmacao.dispose();
 	                    	rem.removerCliente(lista, i);
 	                        dispose(); 
 	                    }
@@ -1034,18 +1021,12 @@ public class TelaRecibo extends JFrame
             documento.close();
             
             // Mostrar mensagem de sucesso
-            JOptionPane.showMessageDialog(this, 
-                "PDF salvo com sucesso!\nArquivo: " + Carro.contCarros, 
-                "Sucesso", 
-                JOptionPane.INFORMATION_MESSAGE);
+            new TelaMsg("Salvar PDF", "PDF salvo com sucesso!\nArquivo: " + Carro.contCarros, "Verifique a sua pasta de documentos");
                 
         } catch (Exception ex) 
         {
             // Mostrar mensagem de erro
-            JOptionPane.showMessageDialog(this, 
-                "Erro ao salvar PDF: " + ex.getMessage(), 
-                "Erro", 
-                JOptionPane.ERROR_MESSAGE);
+        	 new TelaMsg("Salvar PDF", "Erro ao salvar PDF: ", "Por favor, Contacte o Suporte do Sistema");
         }
     }
 }

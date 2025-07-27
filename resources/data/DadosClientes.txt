@@ -30,7 +30,7 @@
 862198765;Isaura Machel;03/25/2025;Entrega concluida;1030;Suzuki;S-Cross;1400;690000;P;Profissional;D;04/15/2023
 847654321;Alberto Nuvunga;04/02/2025;Em processamento;1031;Toyota;Yaris;1300;580000;P;Pessoal;N;Não;0
 822345678;Dulce Macamo;03/16/2025;Em transito;1032;Honda;Fit;1200;520000;E;10;R;SuperAuto;
-863456789;Simão Matsinhe;04/04/2025;Entrega concluida;1033;BMW;X1;2000;1850000;P;Pessoal;N;Sim;5
+863456789;Simão Matsinhe;04/04/2025;Entrega concluida;1033;BMW;X1;2000;1850000;P;Pessoal;N;Sim;4
 840123456;Anabela Muianga;04/07/2025;Em processamento;1034;Audi;A3;1800;1650000;E;10;S;INSS;Sim
 826789012;Rafael Xerinda;03/23/2025;Em transito;1035;Mercedes;GLA;2100;1950000;P;Profissional;D;03/30/2023
 864567890;Catarina Bila;03/31/2025;Entrega concluida;1036;Jeep;Renegade;1600;1250000;E;10;R;VeículosMZ;
@@ -49,5 +49,3 @@
 841234567;André Matavel;04/03/2025;Em processamento;1049;Mitsubishi;ASX;2000;1150000;P;Profissional;D;02/28/2024
 828901234;Olívia Muthemba;04/07/2025;Em transito;1050;Hyundai;Venue;1400;750000;E;1;R;AutoImport;
 841234567;Manuel Cossa;15/10/2025;Em Transito;1058;Toyota;Rush;1500;570000.0;P;Pessoal;N;Nao;0
-849299486;Helder;01/03/2025;Em Transito;1060;Honda;Accord;2400;650000.0;P;Pessoal;N;Nao;0
-849299486;Helder;03/04/2025;Em Transito;1051;Toyota;Camry;2500;680000.0;P;Pessoal;N;Nao;0
