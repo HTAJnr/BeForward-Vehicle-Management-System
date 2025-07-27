@@ -144,6 +144,7 @@ TP2_POO2_BeForward/
    - Navegue até `src/view/TelaLogin.java`
    - Clique direito → Run As → Java Application
    - Ou execute o método main da classe TelaLogin
+   - Ou execute o BeForwardMZ.jar
 
 ### Dados de Acesso
 O sistema possui usuários pré-cadastrados em `resources/data/DadosUsuarios.txt`:
@@ -186,7 +187,7 @@ Cada tipo de cliente possui regras específicas de cálculo e desconto, implemen
 
 ## 📄 Licença
 
-Este projeto foi desenvolvido para fins acadêmicos como parte do curso de Programação Orientada a Objetos II no Instituto Superior de Ciências de Tecnologias de Moçambique.
+Este projeto foi desenvolvido para fins acadêmicos como parte da disciplina de Programação Orientada a Objetos II no Instituto Superior de Ciências de Tecnologias de Moçambique.
 
 ## 🤝 Contribuições
 
