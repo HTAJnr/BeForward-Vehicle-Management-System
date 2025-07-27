@@ -909,38 +909,40 @@ public class TelaRecibo extends JFrame
     {
         JFileChooser fileChooser = new JFileChooser();
         fileChooser.setDialogTitle("Salvar Recibo Como PDF");
-        fileChooser.setSelectedFile(new File("BeForwardRecibo_" + Carro.contCarros + ".pdf"));
+        fileChooser.setSelectedFile(new File("BeForwardRecibo_" + Cliente.contGeralRecibo + ".pdf"));
         fileChooser.setFileFilter(new javax.swing.filechooser.FileFilter() 
         {
             public boolean accept(File f) 
             {
                 return f.isDirectory() || f.getName().toLowerCase().endsWith(".pdf");
             }
-            public String getDescription() {
+            public String getDescription() 
+            {
                 return "Arquivos PDF (*.pdf)";
             }
         });
         
         int userSelection = fileChooser.showSaveDialog(this);
         
-        if (userSelection == JFileChooser.APPROVE_OPTION) {
+        if (userSelection == JFileChooser.APPROVE_OPTION) 
+        {
             File fileToSave = fileChooser.getSelectedFile();
             String fileName = fileToSave.getAbsolutePath();
             
             // Garantir que o arquivo tenha extensão .pdf
-            if (!fileName.toLowerCase().endsWith(".pdf")) {
+            if (!fileName.toLowerCase().endsWith(".pdf")) 
                 fileName += ".pdf";
-            }
+            
             salvarPDF(fileName, contacto, nome, tipoEspecifico, dataCompra, estado, marca, modelo, codigo, cilin, preco);
         }
     }
-    
+
     private void salvarPDF(String nomeArquivo, long contacto, String nome, String tipoEspecifico, String dataCompra, String estado, String marca, String modelo, int codigo, int cilin, float preco)
     {
         try 
         {
-            // Criar documento PDF
-            Document documento = new Document(PageSize.A4);
+            // Criar documento PDF com margens específicas
+            Document documento = new Document(PageSize.A4, 40, 40, 50, 50);
             
             // Criar o escritor PDF
             PdfWriter.getInstance(documento, new FileOutputStream(nomeArquivo));
@@ -948,85 +950,173 @@ public class TelaRecibo extends JFrame
             // Abrir o documento
             documento.open();
             
-            // Definir fontes
-            Font tituloFont = new Font(Font.FontFamily.HELVETICA, 18, Font.BOLD);
-            Font subtituloFont = new Font(Font.FontFamily.HELVETICA, 14, Font.BOLD);
-            Font textoFont = new Font(Font.FontFamily.HELVETICA, 12, Font.NORMAL);
-            Font valorFont = new Font(Font.FontFamily.HELVETICA, 12, Font.BOLD);
-         
-            // Nome da empresa
-            Font empresaFont = new Font(Font.FontFamily.HELVETICA, 22, Font.BOLD);
-            Paragraph empresa = new Paragraph("Be Forward MZ", empresaFont);
-            empresa.setAlignment(Element.ALIGN_CENTER);
-            empresa.setSpacingAfter(5);
-            documento.add(empresa);
+            // Definir fontes exatamente como na tela
+            Font tituloFont = new Font(Font.FontFamily.HELVETICA, 24, Font.BOLD, BaseColor.BLACK);
+            Font numeroReciboFont = new Font(Font.FontFamily.HELVETICA, 20, Font.BOLD, new BaseColor(100, 100, 100));
+            Font secaoFont = new Font(Font.FontFamily.HELVETICA, 16, Font.BOLD, BaseColor.BLACK);
+            Font textoFont = new Font(Font.FontFamily.HELVETICA, 13, Font.BOLD, new BaseColor(120, 117, 113));
+            Font separadorFont = new Font(Font.FontFamily.HELVETICA, 12, Font.BOLD, BaseColor.BLACK);
+            Font totalFont = new Font(Font.FontFamily.HELVETICA, 18, Font.BOLD, new BaseColor(255, 106, 0));
+            Font rodapeFont = new Font(Font.FontFamily.HELVETICA, 14, Font.BOLD, BaseColor.BLACK);
+            Font instrucaoFont = new Font(Font.FontFamily.HELVETICA, 12, Font.ITALIC, BaseColor.BLACK);
             
-            // Título
+            // === CABEÇALHO ===
+            // Título principal
             Paragraph titulo = new Paragraph("RECIBO DE COMPRA", tituloFont);
             titulo.setAlignment(Element.ALIGN_CENTER);
-            titulo.setSpacingBefore(40); 
-            titulo.setSpacingAfter(25);   
+            titulo.setSpacingAfter(5);
             documento.add(titulo);
             
             // Número do recibo
-            Paragraph numeroRec = new Paragraph("Recibo Nº: " + Carro.contCarros, textoFont);
+            Paragraph numeroRec = new Paragraph("Recibo Nº: " + Cliente.contGeralRecibo, numeroReciboFont);
             numeroRec.setAlignment(Element.ALIGN_CENTER);
-            numeroRec.setSpacingAfter(20);
+            numeroRec.setSpacingAfter(15);
             documento.add(numeroRec);
             
-            // Linha separadora
-            documento.add(new Paragraph("============================================================", textoFont));
-            documento.add(new Paragraph(" "));
+            // Separador 1
+            Paragraph sep1 = new Paragraph("===========================================================", separadorFont);
+            sep1.setAlignment(Element.ALIGN_CENTER);
+            sep1.setSpacingAfter(10);
+            documento.add(sep1);
             
-            // Seção do Cliente
-            documento.add(new Paragraph("DADOS DO CLIENTE", subtituloFont));
-            documento.add(new Paragraph("Nome: " + nome, textoFont));
-            documento.add(new Paragraph("Contato: " + contacto, textoFont));
-            documento.add(new Paragraph("Tipo: " + tipo + " - " + tipoEspecifico, textoFont));
-            documento.add(new Paragraph(" "));
+            // === DADOS DO CLIENTE ===
+            Paragraph clienteTitulo = new Paragraph("DADOS DO CLIENTE", secaoFont);
+            clienteTitulo.setAlignment(Element.ALIGN_CENTER);
+            clienteTitulo.setSpacingAfter(12);
+            documento.add(clienteTitulo);
             
-            // Seção do Veículo
-            documento.add(new Paragraph("DADOS DO VEÍCULO", subtituloFont));
-            documento.add(new Paragraph("Código: " + codigo, textoFont));
-            documento.add(new Paragraph("Marca/Modelo: " + marca + " " + modelo, textoFont));
-            documento.add(new Paragraph("Cilindrada: " + cilin + " CC", textoFont));
-            documento.add(new Paragraph("Estado: " + estado, textoFont));
-            documento.add(new Paragraph("Data da Compra: " + dataCompra, textoFont));
-            documento.add(new Paragraph(" "));
+            // Dados do cliente com indentação
+            Paragraph nomeCliente = new Paragraph("Nome: " + nome, textoFont);
+            nomeCliente.setIndentationLeft(20);
+            nomeCliente.setSpacingAfter(5);
+            documento.add(nomeCliente);
             
-            // Linha separadora
-            documento.add(new Paragraph("============================================================", textoFont));
-            documento.add(new Paragraph(" "));
+            Paragraph contatoCliente = new Paragraph("Contato: " + contacto, textoFont);
+            contatoCliente.setIndentationLeft(20);
+            contatoCliente.setSpacingAfter(5);
+            documento.add(contatoCliente);
             
-            // Seção de Valores
-            documento.add(new Paragraph("VALORES E TAXAS", subtituloFont));
-            documento.add(new Paragraph("Preço Base: " + mt.format(preco), textoFont));
-            documento.add(new Paragraph("Direitos Aduaneiros: " + mt.format(direitosAduaneiros), textoFont));
-            documento.add(new Paragraph("Imposto sobre Consumo: " + mt.format(impostoConsumo), textoFont));
-            documento.add(new Paragraph("IVA: " + mt.format(iva), textoFont));
-            documento.add(new Paragraph("Taxas Fixas: " + mt.format(taxasFixas), textoFont));
+            Paragraph tipoCliente = new Paragraph("Tipo: " + tipo + " - " + tipoEspecifico, textoFont);
+            tipoCliente.setIndentationLeft(20);
+            tipoCliente.setSpacingAfter(15);
+            documento.add(tipoCliente);
             
-            if (desconto > 0)
-                documento.add(new Paragraph("Desconto Aplicado: " + mt.format(desconto), textoFont));
+            // === DADOS DO VEÍCULO ===
+            Paragraph carroTitulo = new Paragraph("DADOS DO VEÍCULO", secaoFont);
+            carroTitulo.setAlignment(Element.ALIGN_CENTER);
+            carroTitulo.setSpacingAfter(12);
+            documento.add(carroTitulo);
             
-            documento.add(new Paragraph("TOTAL A PAGAR: " + mt.format(precoFinal), valorFont));
+            // Dados do veículo com indentação
+            Paragraph codigoCarro = new Paragraph("Código: " + codigo, textoFont);
+            codigoCarro.setIndentationLeft(20);
+            codigoCarro.setSpacingAfter(5);
+            documento.add(codigoCarro);
             
-            // Rodapé
-            Paragraph rodape = new Paragraph("Obrigado pela sua preferência!", textoFont);
-            rodape.setAlignment(Element.ALIGN_CENTER);
-            rodape.setSpacingBefore(15);
-            documento.add(rodape);
+            Paragraph marcaCarro = new Paragraph("Marca/Modelo: " + marca + " " + modelo, textoFont);
+            marcaCarro.setIndentationLeft(20);
+            marcaCarro.setSpacingAfter(5);
+            documento.add(marcaCarro);
+            
+            Paragraph cilindradaCarro = new Paragraph("Cilindrada: " + cilin + " CC", textoFont);
+            cilindradaCarro.setIndentationLeft(20);
+            cilindradaCarro.setSpacingAfter(5);
+            documento.add(cilindradaCarro);
+            
+            Paragraph estadoCarro = new Paragraph("Estado: " + estado, textoFont);
+            estadoCarro.setIndentationLeft(20);
+            estadoCarro.setSpacingAfter(5);
+            documento.add(estadoCarro);
+            
+            Paragraph dataCompraDoc = new Paragraph("Data da Compra: " + dataCompra, textoFont);
+            dataCompraDoc.setIndentationLeft(20);
+            dataCompraDoc.setSpacingAfter(15);
+            documento.add(dataCompraDoc);
+            
+            // Separador 2
+            Paragraph sep2 = new Paragraph("===========================================================", separadorFont);
+            sep2.setAlignment(Element.ALIGN_CENTER);
+            sep2.setSpacingBefore(10);
+            sep2.setSpacingAfter(5);
+            documento.add(sep2);
+            
+            // === VALORES E TAXAS ===
+            Paragraph valoresTitulo = new Paragraph("VALORES E TAXAS", secaoFont);
+            valoresTitulo.setAlignment(Element.ALIGN_CENTER);
+            valoresTitulo.setSpacingAfter(12);
+            documento.add(valoresTitulo);
+            
+            // Valores detalhados com indentação
+            Paragraph precoBase = new Paragraph("Preço Base: " + mt.format(preco), textoFont);
+            precoBase.setIndentationLeft(20);
+            precoBase.setSpacingAfter(5);
+            documento.add(precoBase);
+            
+            Paragraph direitosAduaneirosDoc = new Paragraph("Direitos Aduaneiros: " + mt.format(direitosAduaneiros), textoFont);
+            direitosAduaneirosDoc.setIndentationLeft(20);
+            direitosAduaneirosDoc.setSpacingAfter(5);
+            documento.add(direitosAduaneirosDoc);
+            
+            Paragraph impostoConsumoDoc = new Paragraph("Imposto sobre Consumo: " + mt.format(impostoConsumo), textoFont);
+            impostoConsumoDoc.setIndentationLeft(20);
+            impostoConsumoDoc.setSpacingAfter(5);
+            documento.add(impostoConsumoDoc);
+            
+            Paragraph ivaDoc = new Paragraph("IVA: " + mt.format(iva), textoFont);
+            ivaDoc.setIndentationLeft(20);
+            ivaDoc.setSpacingAfter(5);
+            documento.add(ivaDoc);
+            
+            Paragraph taxasFixasDoc = new Paragraph("Taxas Fixas (Despachante + Inspeção): " + mt.format(taxasFixas), textoFont);
+            taxasFixasDoc.setIndentationLeft(20);
+            taxasFixasDoc.setSpacingAfter(5);
+            documento.add(taxasFixasDoc);
+            
+            // Desconto se aplicável
+            if (desconto > 0) 
+            {
+                Font descontoFont = new Font(Font.FontFamily.HELVETICA, 13, Font.BOLD, new BaseColor(220, 20, 60));
+                Paragraph descontoDoc = new Paragraph("Desconto Aplicado: -" + mt.format(desconto), descontoFont);
+                descontoDoc.setIndentationLeft(20);
+                descontoDoc.setSpacingAfter(5);
+                documento.add(descontoDoc);
+            }
+            
+            // Separador 3
+            Paragraph sep3 = new Paragraph("===========================================================", separadorFont);
+            sep3.setAlignment(Element.ALIGN_CENTER);
+            sep3.setSpacingBefore(10);
+            sep3.setSpacingAfter(5);
+            documento.add(sep3);
+            
+            // === TOTAL DESTACADO ===
+            Paragraph totalPagar = new Paragraph("TOTAL A PAGAR: " + mt.format(precoFinal), totalFont);
+            totalPagar.setAlignment(Element.ALIGN_CENTER);
+            totalPagar.setSpacingBefore(5);
+            totalPagar.setSpacingAfter(5);
+            documento.add(totalPagar);
+            
+            // === RODAPÉ ===
+            Paragraph observacoes = new Paragraph("Obrigado pela sua preferência!", rodapeFont);
+            observacoes.setAlignment(Element.ALIGN_CENTER);
+            observacoes.setSpacingBefore(5);
+            documento.add(observacoes);
+            
+            Paragraph instrucoes = new Paragraph("Clique com o botão direito para salvar este recibo em PDF", instrucaoFont);
+            instrucoes.setAlignment(Element.ALIGN_CENTER);
+            documento.add(instrucoes);
             
             // Fechar documento
             documento.close();
             
             // Mostrar mensagem de sucesso
-            new TelaMsg("Salvar PDF", "PDF salvo com sucesso!\nArquivo: " + Carro.contCarros, "Verifique a sua pasta de documentos");
+            new TelaMsg("Salvar PDF", "PDF salvo com sucesso!\nArquivo: " + Cliente.contGeralRecibo, "Verifique a sua pasta de documentos");
                 
         } catch (Exception ex) 
         {
             // Mostrar mensagem de erro
-        	 new TelaMsg("Salvar PDF", "Erro ao salvar PDF: ", "Por favor, Contacte o Suporte do Sistema");
+            new TelaMsg("Salvar PDF", "Erro ao salvar PDF: " + ex.getMessage(), "Por favor, Contacte o Suporte do Sistema");
+            ex.printStackTrace();
         }
     }
 }

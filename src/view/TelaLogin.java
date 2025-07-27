@@ -395,8 +395,6 @@ public class TelaLogin extends JFrame
 		else
 			valido1 = true;
 		
-		
-		
 		passI = passField.getText().trim();
 		if(passI.isEmpty())
 		{
@@ -415,7 +413,7 @@ public class TelaLogin extends JFrame
 			if(u.getSenha().equals(passI))
 			{
 				new TelaMenu();
-				new TelaMsg("Boas-vindas", "BEM-VINDO!", "Clique no botão direito do mouse para ver instruções!");
+				new TelaMsg("Boas-vindas", "BEM-VINDO, "+u.getNome()+"!", "Clique no botão direito do mouse para ver instruções!");
 				dispose();
 			}
 			else
