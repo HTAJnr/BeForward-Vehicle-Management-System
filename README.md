@@ -46,7 +46,7 @@ O sistema foi desenvolvido como trabalho prático da disciplina de Programação
 - Cores da marca BeForward (laranja e preto)
 - Ícones intuitivos e personalizados
 - Efeitos visuais e animações
-- Layout responsivo e profissional
+- Layout profissional
 
 ## 🛠️ Tecnologias Utilizadas
 
