@@ -43,6 +43,9 @@ public class TelaAbout extends JFrame
         titulo.setBorder(BorderFactory.createEmptyBorder(20, 10, 10, 10));
         cont.add(titulo, BorderLayout.NORTH);
         
+        ImageIcon logoWindow = new ImageIcon("./resources/images/BeForward_L.png");
+		setIconImage(logoWindow.getImage());
+        
         // PAINEL CENTRAL
         painelCentral = new JPanel(new GridBagLayout());
         painelCentral.setBackground(corPrincipal);

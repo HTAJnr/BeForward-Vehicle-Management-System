@@ -22,6 +22,9 @@ public class TelaOutputApenasTodos extends JFrame
 		cont = getContentPane();
 		t = new Tabelas();
 		
+		ImageIcon logoWindow = new ImageIcon("./resources/images/BeForward_L.png");
+		setIconImage(logoWindow.getImage());
+		
 		tabTodos = new JTable(t.criarTabelaTodos(array, titTodos), titTodos);
 		tabTodos.setEnabled(false);
 		Color laranja = new Color(255, 106, 0);

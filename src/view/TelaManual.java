@@ -36,6 +36,8 @@ public class TelaManual extends JFrame
         cont = getContentPane();
         cont.setLayout(new BorderLayout());
         cont.setBackground(corPrincipal);
+        ImageIcon logoWindow = new ImageIcon("./resources/images/BeForward_L.png");
+		setIconImage(logoWindow.getImage());
         
         // TITULO
         titulo = new JLabel("Manual de Instruções", SwingConstants.CENTER);

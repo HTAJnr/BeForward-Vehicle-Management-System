@@ -68,6 +68,9 @@ public class TelaMenu extends JFrame
 		aboutI = new ImageIcon("./resources/images/about.png");
 		
 		backgroundImage = new ImageIcon("./resources/images/BFBmz.png").getImage();
+		
+		ImageIcon logoWindow = new ImageIcon("./resources/images/BeForward_L.png");
+		setIconImage(logoWindow.getImage());
 
         // Painel com fundo desenhado
         JPanel backgroundPanel = new JPanel()

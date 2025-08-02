@@ -39,6 +39,8 @@ public class TelaResEmpresarial extends JFrame
     	contP = new ImageIcon("./resources/images/contP.png");
     	canL = new ImageIcon("./resources/images/closeL.png");
     	canP = new ImageIcon("./resources/images/close.png");
+    	ImageIcon logoWindow = new ImageIcon("./resources/images/BeForward_L.png");
+		setIconImage(logoWindow.getImage());
     	
     	Font titulo = new Font("Segoe UI", Font.BOLD, 38);      
     	Font fonte = new Font("SansSerif", Font.BOLD, 18);

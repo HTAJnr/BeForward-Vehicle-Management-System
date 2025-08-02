@@ -32,6 +32,8 @@ public class TelaSituacaoFinanceira extends JFrame
         mt = new DecimalFormat("###,###,###.00 MT");
         
         ImageIcon logo = new ImageIcon("./resources/images/BeForward_LOGO.png");
+        ImageIcon logoWindow = new ImageIcon("./resources/images/BeForward_L.png");
+		setIconImage(logoWindow.getImage());
 
         Font titulo = new Font("Segoe UI", Font.BOLD, 28);
         Font fonte = new Font("Segoe UI", Font.BOLD, 20);

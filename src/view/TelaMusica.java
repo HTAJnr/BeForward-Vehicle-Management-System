@@ -30,6 +30,9 @@ public class TelaMusica extends JFrame
         re1 = new ImageIcon("./resources/images/refresh1.png");
         re2 = new ImageIcon("./resources/images/refresh2.png");
         
+        ImageIcon logoWindow = new ImageIcon("./resources/images/BeForward_L.png");
+		setIconImage(logoWindow.getImage());
+        
         icon = new JLabel(icone, SwingConstants.CENTER);
         cont.add(icon, BorderLayout.CENTER);
         

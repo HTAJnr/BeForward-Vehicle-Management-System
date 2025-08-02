@@ -40,6 +40,9 @@ public class TelaDadosProgramadores extends JFrame
     	Font fonte = new Font("SansSerif", Font.BOLD, 18);
     	Font fonteButton = new Font("SansSerif", Font.BOLD, 16);
     	
+    	ImageIcon logoWindow = new ImageIcon("./resources/images/BeForward_L.png");
+		setIconImage(logoWindow.getImage());
+    	
         // TITULO
         titulo = new JLabel("Dados dos Programadores", JLabel.CENTER);
         titulo.setFont(tit);

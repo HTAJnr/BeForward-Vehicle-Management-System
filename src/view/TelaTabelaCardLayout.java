@@ -40,6 +40,9 @@ public class TelaTabelaCardLayout extends JFrame
 		tabbedPane = new JTabbedPane();
 		Color laranja = new Color(255, 106, 0);
 		
+		ImageIcon logoWindow = new ImageIcon("./resources/images/BeForward_L.png");
+		setIconImage(logoWindow.getImage());
+		
 		tabTodos = new JTable(t.criarTabelaTodos(array, titTodos), titTodos);
 		tabP = new JTable(t.criarTabelaParticular(array, titPart), titPart);
 		tabE = new JTable(t.criarTabelaEmpresarial(array, titEmpr), titEmpr);

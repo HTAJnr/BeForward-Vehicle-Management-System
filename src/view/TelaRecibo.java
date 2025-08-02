@@ -58,6 +58,8 @@ public class TelaRecibo extends JFrame
     	canP = new ImageIcon("./resources/images/close.png");
     	delL = new ImageIcon("./resources/images/deleteL.png");
     	delP = new ImageIcon("./resources/images/deleteP.png");
+    	ImageIcon logoWindow = new ImageIcon("./resources/images/BeForward_L.png");
+		setIconImage(logoWindow.getImage());
         
     	rem = new Remocoes();
     	Cliente c = lista.get(i);

@@ -25,7 +25,8 @@ public class TelaMsg extends JFrame
         cont.setBackground(corPrincipal);
         
         ImageIcon logo = new ImageIcon("./resources/images/BeForward_LOGO.png");
-        
+        ImageIcon logoWindow = new ImageIcon("./resources/images/BeForward_L.png");
+		setIconImage(logoWindow.getImage());
     	Font subtitulo = new Font("Segoe UI", Font.BOLD, 28);
     	Font fonte = new Font("SansSerif", Font.BOLD, 18);
     	Font fonteButton = new Font("SansSerif", Font.BOLD, 16);

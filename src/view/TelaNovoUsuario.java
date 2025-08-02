@@ -49,6 +49,8 @@ public class TelaNovoUsuario extends JFrame
         logP = new ImageIcon("./resources/images/loginP.png");
         volL = new ImageIcon("./resources/images/voltarP.png");
         volP = new ImageIcon("./resources/images/voltarP.png");
+        ImageIcon logoWindow = new ImageIcon("./resources/images/BeForward_L.png");
+		setIconImage(logoWindow.getImage());
         
     	Font titulo = new Font("Segoe UI", Font.BOLD, 42);    
     	Font fonte = new Font("SansSerif", Font.BOLD, 18);

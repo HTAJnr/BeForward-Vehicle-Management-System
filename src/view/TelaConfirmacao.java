@@ -32,6 +32,8 @@ public class TelaConfirmacao extends JFrame
       	canP = new ImageIcon("./resources/images/close.png");
       	conP = new ImageIcon("./resources/images/doneP.png");
       	conL = new ImageIcon("./resources/images/doneL.png");
+      	ImageIcon logoWindow = new ImageIcon("./resources/images/BeForward_L.png");
+		setIconImage(logoWindow.getImage());
         
         Font subtitulo = new Font("Segoe UI", Font.BOLD, 28);
         Font fonte = new Font("SansSerif", Font.BOLD, 18);

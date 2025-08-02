@@ -34,6 +34,8 @@ public class TelaQuantidadeClientes extends JFrame
         Font fonte = new Font("Segoe UI", Font.BOLD, 20);
         
         ImageIcon logo = new ImageIcon("./resources/images/BeForward_LOGO.png");
+        ImageIcon logoWindow = new ImageIcon("./resources/images/BeForward_L.png");
+		setIconImage(logoWindow.getImage());
         
         // PAINEL TOPO QUE CONTEM O LOGO E O TITULO
         painelTopo = new JPanel();

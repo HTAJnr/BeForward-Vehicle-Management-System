@@ -41,6 +41,8 @@ public class TelaAlterar extends JFrame
     	altP = new ImageIcon("./resources/images/alterarP.png");
     	canL = new ImageIcon("./resources/images/closeL.png");
     	canP = new ImageIcon("./resources/images/close.png");
+    	ImageIcon logoWindow = new ImageIcon("./resources/images/BeForward_L.png");
+		setIconImage(logoWindow.getImage());
     	
     	Font titulo = new Font("Segoe UI", Font.BOLD, 40);
     	Font fonte = new Font("SansSerif", Font.BOLD, 18);
